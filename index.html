@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#19252f" />
+    <meta name="description" content="Al Akaria Transactions, agence immobilière à Casablanca : vente, location et estimation de biens résidentiels et professionnels." />
+    <meta property="og:title" content="Al Akaria Transactions — Immobilier à Casablanca" />
+    <meta property="og:description" content="Découvrez les annonces de vente et de location de l’agence Al Akaria Transactions à Casablanca." />
+    <meta property="og:type" content="website" />
+    <title>Al Akaria Transactions — Immobilier à Casablanca</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="data.js" defer></script>
+    <script src="media-config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#accueil" aria-label="Al Akaria Transactions — accueil">
+          <img src="assets/logo.png" alt="Al Akaria Transactions — agence immobilière" />
+        </a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+          <a href="#accueil">Accueil</a>
+          <a href="#biens">Nos biens</a>
+          <a href="#agence">L’agence</a>
+          <a href="#contact">Contact</a>
+          <a class="header-phone" href="tel:+212665652877"><span class="phone-icon" aria-hidden="true">☎</span><span>+212 6 65 65 28 77</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil" aria-label="Al Akaria Transactions à Casablanca">
+        <div class="hero-background" id="heroBackground" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> L’immobilier à Casablanca</div>
+          <h1>Un lieu à soi.<br /><em>Un choix éclairé.</em></h1>
+          <p class="hero-intro">Vente, location et estimation : trouvons ensemble le bien qui vous ressemble, avec la connaissance du terrain d’une agence casablancaise.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#biens">Explorer les biens <span aria-hidden="true">→</span></a>
+            <a class="button-text" href="tel:+212665652877"><span aria-hidden="true">☎</span> Parlons de votre projet</a>
+          </div>
+          <div class="hero-footnote">
+            <span class="hero-compass" aria-hidden="true">⌖</span>
+            <span>Des quartiers choisis.<br /><b>Des conseils de proximité.</b></span>
+            <span class="hero-number" id="heroNumber">01 <small>/ 03</small></span>
+          </div>
+        </div>
+        <div class="hero-carousel" aria-label="Diaporama d’inspiration immobilière">
+          <div class="hero-caption" aria-live="polite">
+            <span>Inspirations immobilières · visuels d’ambiance</span>
+            <strong id="heroCaption">Une architecture ouverte sur la lumière</strong>
+          </div>
+          <div class="hero-controls" role="group" aria-label="Commandes du diaporama">
+            <span class="hero-count" id="heroCount">01 <i>/ 03</i></span>
+            <div class="hero-dots" id="heroDots" aria-label="Choisir une photo"></div>
+            <button class="carousel-arrow" id="heroPrevious" type="button" aria-label="Photo précédente">‹</button>
+            <button class="carousel-arrow" id="heroNext" type="button" aria-label="Photo suivante">›</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-section" aria-labelledby="searchHeading">
+        <div class="section-kicker" id="searchHeading"><span>Votre recherche commence ici</span><span class="kicker-line"></span></div>
+        <form class="search-panel" id="searchForm">
+          <div class="search-tabs" role="group" aria-label="Type de transaction">
+            <button class="search-tab active" data-deal="Tous" type="button" aria-pressed="true">Tous les biens</button>
+            <button class="search-tab" data-deal="Vente" type="button" aria-pressed="false">Acheter</button>
+            <button class="search-tab" data-deal="Location" type="button" aria-pressed="false">Louer</button>
+          </div>
+          <div class="search-fields">
+            <label class="search-field search-query"><span>Mot-clé</span><div class="field-control"><span aria-hidden="true">⌕</span><input id="queryFilter" type="search" placeholder="Quartier, titre, ville…" /></div></label>
+            <label class="search-field"><span>Type de bien</span><div class="field-control"><span aria-hidden="true">⌂</span><select id="typeFilter"><option value="">Tous les types</option></select></div></label>
+            <label class="search-field"><span>Localisation</span><div class="field-control"><span aria-hidden="true">⌖</span><select id="districtFilter"><option value="">Tous les quartiers</option></select></div></label>
+            <label class="search-field"><span>Budget max.</span><div class="field-control"><span class="currency">DH</span><select id="priceFilter"><option value="">Sans limite</option><option value="10000">10 000 DH</option><option value="25000">25 000 DH</option><option value="50000">50 000 DH</option><option value="100000">100 000 DH</option><option value="250000">250 000 DH</option><option value="1000000">1 000 000 DH</option><option value="3000000">3 000 000 DH</option></select></div></label>
+            <label class="search-field"><span>Caractéristique</span><div class="field-control"><span aria-hidden="true">✦</span><select id="amenityFilter"><option value="">Toutes</option><option>Terrasse</option><option>Jardin</option><option>Piscine</option><option>Garage</option><option>Climatisation</option><option>Meublé</option></select></div></label>
+            <button class="search-submit" type="submit"><span aria-hidden="true">⌕</span> Rechercher</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="listings-section section-wrap" id="biens">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> La sélection de l’agence</div><h2>Des biens faits<br /><em>pour vos projets.</em></h2></div>
+          <div class="heading-aside"><p>Des appartements aux bureaux, retrouvez les annonces publiées par notre agence à Casablanca.</p><a href="https://www.mubawab.ma/fr/b/7756/al-akaria-transactions" target="_blank" rel="noopener noreferrer">Voir le profil des annonces <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="listings-toolbar"><div><strong id="resultsCount">16</strong> <span id="resultsLabel">biens trouvés</span></div><span class="catalogue-note">Détails et tarifs selon les annonces publiées</span></div>
+        <div class="property-grid" id="propertyGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden><div class="empty-icon" aria-hidden="true">⌕</div><h3>Aucun bien ne correspond à ces critères.</h3><p>Modifiez vos filtres ou contactez l’agence pour parler de votre recherche.</p><button class="button-primary" id="resetFilters" type="button">Effacer les filtres <span aria-hidden="true">→</span></button></div>
+        <div class="listings-foot"><span>Les photos Mubawab ne sont pas reproduites sur ce site. Consultez l’annonce source pour les voir.</span><a href="https://www.mubawab.ma/fr/b/7756/al-akaria-transactions" target="_blank" rel="noopener noreferrer">Annonces d’origine <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section class="agency-band" id="agence">
+        <div class="agency-band-inner section-wrap">
+          <div class="agency-side-note"><span class="agency-side-number">01</span><span>Notre agence</span></div>
+          <div class="agency-copy"><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> À vos côtés, à Casablanca</div><h2>Le bon conseil<br /><em>change tout.</em></h2><p>Al Akaria Transactions réunit une équipe de professionnels qualifiés, spécialisée dans la vente, la location et l’évaluation de biens immobiliers pour les particuliers et les professionnels.</p><div class="agency-points"><div><span class="point-icon">✓</span><span>Une expertise de proximité</span></div><div><span class="point-icon">✓</span><span>Des projets résidentiels et professionnels</span></div><div><span class="point-icon">✓</span><span>Un accompagnement à chaque étape</span></div></div><a class="button-lime" href="tel:+212665652877">Échangeons sur votre projet <span aria-hidden="true">↗</span></a></div>
+          <div class="agency-image-frame" aria-hidden="true"><div class="agency-image-mark">A.</div><div class="agency-image-caption"><span>AL AKARIA TRANSACTIONS</span><span>CASABLANCA, MAROC</span></div><div class="agency-image-line"></div></div>
+        </div>
+      </section>
+
+      <section class="contact-section section-wrap" id="contact">
+        <div class="contact-copy"><div class="eyebrow"><span class="eyebrow-line"></span> Parlons de votre projet</div><h2>La prochaine<br /><em>étape, c’est vous.</em></h2><p>Une question sur un bien ou un projet immobilier à Casablanca ? L’équipe Al Akaria est à votre écoute.</p>
+          <div class="contact-direct"><a class="contact-direct-row" href="tel:+212665652877"><span class="contact-direct-icon">☎</span><span><small>Appelez-nous</small><strong>+212 6 65 65 28 77</strong></span><span aria-hidden="true">↗</span></a><a class="contact-direct-row" href="https://wa.me/212665652877" target="_blank" rel="noopener noreferrer"><span class="contact-direct-icon">◉</span><span><small>Écrivez-nous sur WhatsApp</small><strong>Nous contacter</strong></span><span aria-hidden="true">↗</span></a><a class="social-link" href="https://www.facebook.com/AlAkariaTransactions/" target="_blank" rel="noopener noreferrer">Suivre Al Akaria Transactions sur Facebook <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <form class="contact-form" id="contactForm"><div class="form-topline"><span>Demande de contact</span><span>01 / 02</span></div><p>Quelques informations pour mieux vous accompagner.</p>
+          <div class="form-row"><label>Votre nom<input name="name" autocomplete="name" placeholder="Prénom et nom" required /></label><label>Votre téléphone<input name="phone" type="tel" autocomplete="tel" placeholder="+212 …" required /></label></div>
+          <label>Votre e-mail<input name="email" type="email" autocomplete="email" placeholder="nom@exemple.com" required /></label>
+          <label>Votre projet<textarea name="message" rows="4" placeholder="Achat, location, estimation… Dites-nous en quelques mots." required></textarea></label>
+          <button class="button-primary form-submit" type="submit">Préparer mon message <span aria-hidden="true">↗</span></button>
+          <span class="form-note">Votre message s’ouvrira dans WhatsApp. Vous pourrez le vérifier avant de l’envoyer.</span>
+          <span class="form-success" id="formSuccess" hidden>Votre demande est prête dans WhatsApp.</span>
+        </form>
+      </section>
+
+      <section class="closing-banner"><div class="closing-banner-inner section-wrap"><span>AL AKARIA TRANSACTIONS <i></i> CASABLANCA</span><p>Un quartier à découvrir.<br /><em>Un projet à concrétiser.</em></p><a href="#biens" aria-label="Revenir aux biens">↓</a></div></section>
+    </main>
+
+    <dialog class="property-dialog" id="propertyDialog" aria-label="Détail du bien"><div id="detailContent"></div></dialog>
+    <footer class="site-footer"><div class="footer-main section-wrap"><a class="brand footer-brand" href="#accueil"><img src="assets/logo.png" alt="Al Akaria Transactions" /></a><p>Votre agence immobilière à Casablanca.<br />Vente · Location · Évaluation</p><a class="footer-call" href="tel:+212665652877">☎ +212 6 65 65 28 77</a></div><div class="footer-bottom section-wrap"><span>© <span id="year"></span> Al Akaria Transactions</span><span>Casablanca, Maroc</span><a href="https://www.mubawab.ma/fr/b/7756/al-akaria-transactions" target="_blank" rel="noopener noreferrer">Consulter les annonces d’origine <span aria-hidden="true">↗</span></a><span class="footer-credit">Un accompagnement immobilier de proximité</span></div></footer>
+  </body>
+</html>
